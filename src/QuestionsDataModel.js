@@ -99,12 +99,12 @@ for(var key in inputvalue){
       comment3_1 = "Vedholdenhed, arbejde med frustrationer";
       comment3_2 = "Se de muligheder der kan bringe den unge videre";
       comment3_3 = "Konstruktive relationer, gode f?llesskaber, underst?ttende p? vejen mod m?let ";
-      comment3_4 = "R?kke ud efter st?tte ved problemer eller for at komme videre"; comment3_5 ="Forholde sig til sagen, forblive îp? egen banehalvdelî";
+      comment3_4 = "R?kke ud efter st?tte ved problemer eller for at komme videre"; comment3_5 ="Forholde sig til sagen, forblive ‚Äùp? egen banehalvdel‚Äù";
       // Instructions to Fleksibilitet
       comment4_1 = "Identificere problemet eller muligheden og tage initiativ";
       comment4_2 = "Generelt, ikke ubetinget tilpasning i enhver situation";
       comment4_3 = "Ogs? efter ordre eller pga. udefrakommende omst?ndigheder";
-      comment4_4 = "Reflektere over alternativer og afklare omst?ndigheder for ?ndringer"; comment4_5 ="N?r n?dvendigt eller ?nskv?rdigt. I praktikcentre: EMMA-kriteriet îgeografisk mobilitetî";
+      comment4_4 = "Reflektere over alternativer og afklare omst?ndigheder for ?ndringer"; comment4_5 ="N?r n?dvendigt eller ?nskv?rdigt. I praktikcentre: EMMA-kriteriet ‚Äùgeografisk mobilitet‚Äù";
         // Instructions to Sociale normer
       comment5_1 = "OBS g?lder ikke ved destruktive forhold p? arbejdspladsen";
       comment5_2 = "OBS g?lder ikke ved destruktive forhold p? arbejdspladsen";
@@ -112,55 +112,55 @@ for(var key in inputvalue){
       comment5_4 = "I bred forstand og under hensyntagen til egne gr?nser"; comment5_5 ="Omhandler konflikth?ndtering i bred forstand";
       comment5_6 ="Reflektere over forhold p? arbejdspladsen";
         // Instructions to Min faglighed
-      comment6_1 = "Den forn?dne faglighed p? det givne niveau. I praktikcentre: EMMA-kriteriet îFagligt egnetî";
-      comment6_2 = "Kontekstafh?ngig: forts?tte p? den faglige vej, ikke falde fra, îfaglig stabilitetî";
+      comment6_1 = "Den forn?dne faglighed p? det givne niveau. I praktikcentre: EMMA-kriteriet ‚ÄùFagligt egnet‚Äù";
+      comment6_2 = "Kontekstafh?ngig: forts?tte p? den faglige vej, ikke falde fra, ‚Äùfaglig stabilitet‚Äù";
       comment6_3 = "Kontekstafh?ngig: faglig nysgerrighed, lysten til at l?re, efter- og videreuddannelse";
-      comment6_4 = "Kontekstafh?ngig: at kunne skifte spor. I praktikcentre: EMMA-kriteriet îFaglig mobilitetî "; 
-      comment6_5 = "Fx fritidsjob, job, praktik eller arbejdsopgaver. I praktikcentre: EMMA-kriteriet îAktivt s?gendeî î "; 
+      comment6_4 = "Kontekstafh?ngig: at kunne skifte spor. I praktikcentre: EMMA-kriteriet ‚ÄùFaglig mobilitet‚Äù "; 
+      comment6_5 = "Fx fritidsjob, job, praktik eller arbejdsopgaver. I praktikcentre: EMMA-kriteriet ‚ÄùAktivt s?gende‚Äù ‚Äù "; 
 
    }
    */
-   
-   questionArray[0] = new question(comment1_1,"V ûivljenju ne obupujem, ampak vedno poskusim znova.",inputvalue[key].val1[0]);
-   questionArray[1]=  new question(comment1_2,"Sposoben sem sprejeti kritiko.",inputvalue[key].val1[1]);
-   questionArray[2] = new question( comment1_3,"»e naredim napako, jo priznam in popravim.",inputvalue[key].val1[2]);
-   questionArray[3] = new question( comment1_4,"Kadar se znajdem v ûivljenjski stiski, znam prositi za pomoË.",inputvalue[key].val1[3]);
-   questionArray[4] = new question(comment1_5,"Vzdrûujem odnose, ki mi pomagajo na moji poklicni poti. ",inputvalue[key].val1[4]);
-
+   //Resilence
+   questionArray[0] = new question(comment1_1,"I do not give up, I try again.",inputvalue[key].val1[0]);
+   questionArray[1]=  new question(comment1_2,"I recognize my mistakes and correct them.",inputvalue[key].val1[1]);
+   questionArray[2] = new question( comment1_3,"If I am stuck, I ask for help. ",inputvalue[key].val1[2]);
+   questionArray[3] = new question( comment1_4,"‚Ä¢	I maintain supportive relationships.",inputvalue[key].val1[3]);
+ 
+  // Motivation 
    questionArray2 = [];
-   questionArray2[0] = new question(comment2_1,"Motiviran sem za opravljanje vsakrönega dela.",inputvalue[key].val2[0]);
-   questionArray2[1]= new question(comment2_2,"Na dogovorjena sreËanja (sestanke, delo itd.) pridem pripravljen, pravoËasno in redno.",inputvalue[key].val2[1]);
-   questionArray2[2]= new question(comment2_3,"Ljudje se lahko zanesejo name, saj naredim, kar se dogovorimo.",inputvalue[key].val2[2]);
-   questionArray2[3]= new question(comment2_4,"Vestno opravljam tudi delo, ki me ne zanima.",inputvalue[key].val2[3]);
-   questionArray2[4]= new question(comment2_5,"Prevzamem odgovornost za dano nalogo.",inputvalue[key].val2[4]);
+   questionArray2[0] = new question(comment2_1,"I approach my work / my education with commitment",inputvalue[key].val2[0]);
+   questionArray2[1]= new question(comment2_2,"I complete the tasks agreed upon",inputvalue[key].val2[1]);
+   questionArray2[2]= new question(comment2_3,"I keep my word ",inputvalue[key].val2[2]);
+   questionArray2[3]= new question(comment2_4,"I show up on time",inputvalue[key].val2[3]);
+   questionArray2[4]= new question(comment2_5,"I work diligently even on tasks that do not interest me",inputvalue[key].val2[4]);
  
    questionArray3 = [];
-   questionArray3[0] = new question(comment3_1,	"Znam narediti naËrt, s katerim opredelim cilje in pot za njihovo doseganje."	,inputvalue[key].val3[0]);
-   questionArray3[1]= new question(comment3_2,	"Zavedam se, v koliköni meri sem sam odgovoren za svojo trenutno ûivljenjsko situacijo.",inputvalue[key].val3[1]);
-   questionArray3[2] = new question(comment3_3,"Razumem, kako moje odloËitve lahko vplivajo na mojo prihodnost.",inputvalue[key].val3[2]);
-   questionArray3[3] = new question(comment3_4,"Raziskujem razliËne moûnosti za dosego svojih ciljev.",inputvalue[key].val3[3]);
-   questionArray3[4] = new question(comment3_5,"Za dosego ciljev in uresniËevanje naËrta sem se pripravljen sooËiti z izzivi in zahtevnimi nalogami.",inputvalue[key].val3[4]);
+   questionArray3[0] = new question(comment3_1,	"Znam narediti na√®rt, s katerim opredelim cilje in pot za njihovo doseganje."	,inputvalue[key].val3[0]);
+   questionArray3[1]= new question(comment3_2,	"Zavedam se, v kolik≈°ni meri sem sam odgovoren za svojo trenutno ≈æivljenjsko situacijo.",inputvalue[key].val3[1]);
+   questionArray3[2] = new question(comment3_3,"Razumem, kako moje odlo√®itve lahko vplivajo na mojo prihodnost.",inputvalue[key].val3[2]);
+   questionArray3[3] = new question(comment3_4,"Raziskujem razli√®ne mo≈ænosti za dosego svojih ciljev.",inputvalue[key].val3[3]);
+   questionArray3[4] = new question(comment3_5,"Za dosego ciljev in uresni√®evanje na√®rta sem se pripravljen soo√®iti z izzivi in zahtevnimi nalogami.",inputvalue[key].val3[4]);
  
    questionArray4 = [];
-   questionArray4[0] = new question(comment4_1,"Vem, kako pogosto se iöËe delavce za delo, ki me zanima."	,inputvalue[key].val4[0]);
-   questionArray4[1]= new question(comment4_2,"Samostojno in iz razliËnih virov (splet, sodelavci, nadrejeni ipd.) pridobivam informacije, ki jih potrebujem pri svojem delu.",inputvalue[key].val4[1]);
-   questionArray4[2] = new question(comment4_3,"Zavedam se, da ima vsako delovno okolje svoja pravila, navade, cilje ipd., ki jih je treba upoötevati.",inputvalue[key].val4[2]);
-   questionArray4[3] = new question(comment4_4,"Pri delu sem pripravljen upoötevati navodila nadrejenega.",inputvalue[key].val4[3]);
-   questionArray4[4] = new question(comment4_5,"Razmiöljam, kako bi se delo lahko izboljöalo. Izvedem ali predlagam izboljöave.",inputvalue[key].val4[4]);
+   questionArray4[0] = new question(comment4_1,"Vem, kako pogosto se i≈°√®e delavce za delo, ki me zanima."	,inputvalue[key].val4[0]);
+   questionArray4[1]= new question(comment4_2,"Samostojno in iz razli√®nih virov (splet, sodelavci, nadrejeni ipd.) pridobivam informacije, ki jih potrebujem pri svojem delu.",inputvalue[key].val4[1]);
+   questionArray4[2] = new question(comment4_3,"Zavedam se, da ima vsako delovno okolje svoja pravila, navade, cilje ipd., ki jih je treba upo≈°tevati.",inputvalue[key].val4[2]);
+   questionArray4[3] = new question(comment4_4,"Pri delu sem pripravljen upo≈°tevati navodila nadrejenega.",inputvalue[key].val4[3]);
+   questionArray4[4] = new question(comment4_5,"Razmi≈°ljam, kako bi se delo lahko izbolj≈°alo. Izvedem ali predlagam izbolj≈°ave.",inputvalue[key].val4[4]);
 
    questionArray5 = [];
-   questionArray5[0] = new question(comment5_1,"Pripravljen sem se preseliti/voziti na izobraûevanje ali delo."	,inputvalue[key].val5[0]);
-   questionArray5[1] = new question(comment5_2,"Sposoben sem delati veË nalog hkrati."	,inputvalue[key].val5[1]);
-   questionArray5[2] = new question(comment5_3,"Pripravljen sem se prilagoditi razliËnim naËinom dela (samostojno, v paru, v skupini ipd.)."	,inputvalue[key].val5[2]);
-   questionArray5[3] = new question(comment5_4,"»e je potrebno, lahko spremenim svoja staliöËa in odloËitve."	,inputvalue[key].val5[3]);
-   questionArray5[4]= new question(comment5_5,	"Sposoben sem se prilagoditi spremembam na delu (npr. druga lokacija, drugaËen delovni Ëas, novi sodelavci, drugo delovno mesto in naloge).",inputvalue[key].val5[4]);
+   questionArray5[0] = new question(comment5_1,"Pripravljen sem se preseliti/voziti na izobra≈æevanje ali delo."	,inputvalue[key].val5[0]);
+   questionArray5[1] = new question(comment5_2,"Sposoben sem delati ve√® nalog hkrati."	,inputvalue[key].val5[1]);
+   questionArray5[2] = new question(comment5_3,"Pripravljen sem se prilagoditi razli√®nim na√®inom dela (samostojno, v paru, v skupini ipd.)."	,inputvalue[key].val5[2]);
+   questionArray5[3] = new question(comment5_4,"√àe je potrebno, lahko spremenim svoja stali≈°√®a in odlo√®itve."	,inputvalue[key].val5[3]);
+   questionArray5[4]= new question(comment5_5,	"Sposoben sem se prilagoditi spremembam na delu (npr. druga lokacija, druga√®en delovni √®as, novi sodelavci, drugo delovno mesto in naloge).",inputvalue[key].val5[4]);
  
    questionArray6 = [];
-   questionArray6[0] = new question(comment6_1,"Na podlagi predstavitve konkretnega delovnega mesta, znam presoditi ali imam zanj potrebna znanja in veöËine."	,inputvalue[key].val6[0]);
+   questionArray6[0] = new question(comment6_1,"Na podlagi predstavitve konkretnega delovnega mesta, znam presoditi ali imam zanj potrebna znanja in ve≈°√®ine."	,inputvalue[key].val6[0]);
    questionArray6[1]= new question(comment6_2,	"Znam se predstaviti potencialnemu delodajalcu.",inputvalue[key].val6[1]);
-   questionArray6[2] = new question(comment6_3,"éelim si in sem pripravljen öe naprej razvijati svoja znanja in veöËine.",inputvalue[key].val6[2]);
-   questionArray6[3] = new question(comment6_4,"Delovne naloge opravljam natanËno in z le malo napakami.",inputvalue[key].val6[3]);
-   questionArray6[4] = new question(comment6_5,"»e bi bilo potrebno, sem pripravljen pridobiti znanja in veöËine za drug poklic.",inputvalue[key].val6[4]);
+   questionArray6[2] = new question(comment6_3,"≈Ωelim si in sem pripravljen ≈°e naprej razvijati svoja znanja in ve≈°√®ine.",inputvalue[key].val6[2]);
+   questionArray6[3] = new question(comment6_4,"Delovne naloge opravljam natan√®no in z le malo napakami.",inputvalue[key].val6[3]);
+   questionArray6[4] = new question(comment6_5,"√àe bi bilo potrebno, sem pripravljen pridobiti znanja in ve≈°√®ine za drug poklic.",inputvalue[key].val6[4]);
   
    var prop = [questionArray,questionArray2,questionArray3,questionArray4,questionArray5,questionArray6];
   

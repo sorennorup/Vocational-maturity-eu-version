@@ -3,7 +3,12 @@ let Result = function(id,profile_id){
 	this.profile_id = profile_id;
 	this.res_array = ['result','result2','result3','result4','result5','result6'];
 	this.dir_res_array = ['res1','res2','res3','res4','res5','res6'];
-	this.labelsarray = ["Rezilientnost","Motivacija","Doloèanje ciljev ","Trg dela in delovno okolje","Prilagodljivost","Poklicne vešèine "];
+	this.labelsarray = ["Resilience",
+	"Motivation",
+	"Goal setting",
+	"Flexibility",
+	"Social norms",
+	"Professional skills"];
 
 	this.directResultViewId = function() {
 		var resstr = '';

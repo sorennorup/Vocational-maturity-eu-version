@@ -88,7 +88,7 @@ PrintToPdf = function(results1,results2,results3,labelarr){
 
 	createCommentArray = function (commentArr) {
 		let comments = [];
-		let labels = ['Rezilientnost','Motivacija','Doloèanje ciljev','Trg dela in delovno okolje','Prilagodljivost','Poklicne vešèine'];
+		let labels = ['Rezilientnost','Motivacija','DoloÃ¨anje ciljev','Trg dela in delovno okolje','Prilagodljivost','Poklicne veÅ¡Ã¨ine'];
 		for(let i = 0; i < labelarr.length; i++) {
 			let props = [labels[i]+'  '+commentArr[i]];
 			comments.push(props);

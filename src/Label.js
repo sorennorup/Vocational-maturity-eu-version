@@ -1,6 +1,11 @@
 Label = function(){
 	
-	this.labelarr = ["Rezilientnost","Motivacija","Doloèanje ciljev ","Trg dela in delovno okolje","Prilagodljivost","Poklicne vešèine "];
+	this.labelarr = ["Resilience",
+					"Motivation",
+					"Goal setting",
+					"Flexibility",
+					"Social norms",
+					"Professional skills"];
 	
 	this.setLabels = function(view){
 		var labelstr = "";
@@ -18,7 +23,13 @@ Label = function(){
 	this.setCommentViewLabels = function(){
 		let profiles = ['Svetovanec','Cilj','Svetovalec'];
 		let comments = [commentsArrProf1,commentsArrProf2,commentsArrProf3];
-		var labelarr = ["Rezilientnost","Motivacija","Doloèanje ciljev ","Trg dela in delovno okolje","Prilagodljivost","Poklicne vešèine "];
+		var labelarr = [
+		"Resilience",
+		"Motivation",
+		"Goal setting",
+		"Flexibility",
+		"Social norms",
+		"Professional skills"];
 		let html = "";
 		for(let j = 0; j < profiles.length; j++){
 		 html += "<tr><th>"+profiles[j]+"</th></tr>";
@@ -30,7 +41,12 @@ Label = function(){
 	}
 };      
   
-var labelsarray = ["Rezilientnost","Motivacija","Doloèanje ciljev ","Trg dela in delovno okolje","Prilagodljivost","Poklicne vešèine "];
+var labelsarray = ["Resilience",
+				"Motivation",
+				"Goal setting",
+				"Flexibility",
+				"Social norms",
+				"Professional skills"];
 var profile1_labelarr = ["testaf ny profio","nye labels","wordtest","hvad er det", "mums"];
 	   var label;
 	   
