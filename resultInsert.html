@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>  
+    
+    <head>
+    
+         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <script src = "src/jquery.js"></script>
+         <script src =" bootstrap/js/bootstrap.min.js"></script>
+         <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>-->
+        <script src = "src/wysiwyg.js"></script>
+        <script src = "src/helpers.js"></script>		
+        <script src = "src/loadCounter.js"></script>
+        <script src = "src/View.js"></script>
+        <script src = "src/Reset.js"></script>
+        <script src = "src/InputControl.js"></script>
+        <script src = "src/Question.js"></script>
+        <script src = "src/Profile.js"></script>
+        <script src = "src/PrintToPdf.js"></script>
+        <script src = "src/Result.js"></script>
+        <script src = "src/Comment.js"></script>  
+        <script src = "src/QuestionsDataModel.js"></script>
+        <script src = "src/Label.js"></script>
+        <script src = "src/EventsControl.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:300,400,400i,500,600,700" rel="stylesheet">
+
+    </head>
+    <script>
+
+    </script>
+        <body id = "print-body">
+            
+          <div class = "container">
+            <div class = "row">
+                    
+               <div class = "col-lg-12">
+
+                <div id = "title"></div>
+                <script>
+                    newView.setTitle();
+                </script>
+               <div id = "display-profile-btn"></div>
+	<script>
+			document.getElementById('display-profile-btn').innerHTML = newView.displayProfileButtons();
+    </script>
+    
+    <div id="accordion">
+        <div class="card accordion__card">
+          <a class="card-header" id="accordion__heading">
+            <h5 class="mb-0">
+              <div id = "collapse-id" class="" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                O METODI
+              </div>
+            </h5>
+        </a>
+
+          <div id="collapseOne" class="collapse hide" aria-labelledby="accordion__heading" data-parent="#accordion">
+            <div id = 'accordion__body' class="card-body">
+              <p>Z uporabo spletnega orodja želimo spodbuditi tvoje razmišljanje na temo poklicne zrelosti. Ko ovrednotiš 30 trditev znotraj 6. podroèij (rezilientnost, motivacija, doloèanje ciljev, trg dela in delovno okolje, prilagodljivost, poklicne vešèine), bodo tvoji odgovori prikazani pisno in v obliki diagrama. Odgovori niso »pravilni« ali »napaèni« ampak zgolj odražajo tvojo trenutno situacijo in ti pomagajo prepoznati možnosti za nadaljnji razvoj. Diagram spominja na radar ali pajèevino.</p>
+
+                        <p>Poklicna zrelost predstavlja tvoje izhodišèe in potencial ob zaèetku praktiènega usposabljanja, pripravništva ali zaposlitve. Enak razmislek velja pred (ponovnim) vkljuèevanjem v programe poklicnega in strokovnega izobraževanja, še posebej vajeništva.</p>
+
+                        <p>Reševanje ti bo vzelo približno 20 minut. Tvoji odgovori ne bodo shranjeni ali posredovani drugim. Èe želiš, lahko tvoje odgovore tudi natisneš. Želimo ti vse dobro na poti do tvoje poklicne zrelosti!</p>
+
+                        <p>Za vsako od 30. trditev oznaèi, v kolikšni meri veljajo zate, tako da izbereš enega od spodnjih šestih odgovorov.</p>
+            </div>
+          </div>
+        </div>
+    </div>	
+
+               <!----------***** Commentbox stuff *****------------->
+                <!--  modalboxview here -->
+                <div id = "modal-box"></div>
+                 <!-- End modalboxview here -->
+          <script>
+            
+            $('#accordion').on('hidden.bs.collapse', removeBackground);
+			$('#accordion').on('shown.bs.collapse', addBackground);
+			$('#collapse-id').addClass('accordion__plussign');
+        
+            // Create the viewobject
+            let viewHandler = new View();
+            // Insert the modalboxview inside the div
+           
+    </script>
+           
+        
+         <!----------***** End Commentbox stuff *****------------->
+             <!---   Start the form    --> 
+           
+            <table style = "display:none;" width = "200px" class = "table-hover" id = "question"> <!-- Start table -->
+           
+            <tr>
+                <th  style = "font-size:20px; " valign = "left" id = "labelsView">
+               </th>
+    
+            </tr>
+    
+    <script>
+           
+            // Init dataobjects
+             var data = new Result(id,1);
+             var data2 = new Result(id,1);
+             var data3 = new Result(id,2);
+             var data5  = new Result(id,3);
+              
+            // Make the profilelinks active 
+             event_control.adClickedToButton();
+             event_control.addListenerToProfileLink();
+                         
+            // Create the profile for the questions// Profile array is containing all the questions of the profile
+             var profile2 = new Profile(profile_array[1],'Cilj', 2, labelsarray);
+             var profile = new Profile(profile_array[0],'Svetovanec',1,labelsarray);
+             var profile3 = new Profile(profile_array[2],'Svetovalec',3,labelsarray);
+
+             // get the stored result for the Chart
+             var storedResults = profile.getResults(); 
+             var storedResults2 = profile2.getResults();
+             var storedResults3 = profile3.getResults();
+             var profile_id = sessionStorage.profileid;
+                
+    </script>
+            
+            </table>   <!-- End the table -->
+         
+         <div id = "questionnaire">
+             
+            <div id = "questionnaire-inner" class="panel"> </div>
+         </div>
+         
+        <script> 
+        
+        document.getElementById('questionnaire-inner').innerHTML = viewHandler.displayManualInputView();
+        
+        </script>
+         
+         </div>
+                    
+         <div class = "col-lg-12">
+                <div id = "result-container" class = "result-direct">
+                    <div class= "table-panel panel ">
+                    <div class="panel-body">
+                        <div class = "name-and-date">
+                            <p id = "dato"></p>
+                            <h3>Tvoje ime </h3>
+                        </div>
+                    <table  id = "resultViewDir"> </table>
+                    <div id = "resultMobileView"></div>
+                    </div>
+                                  
+                  <div id = chartContainer>
+                  <canvas id = "myChart"> </canvas>
+                  <div id = "chart-legends"></div>
+                </div>
+                <div class = 'download-button-container'>
+                        <button class = "download-btn btn-success " id = 'download-pdf'>Izvozi v PDF </button>    
+                        <button class = " download-btn btn-success " id = 'download-full-pdf'>Izvozi v PDF (celotna razlièica)</button>
+                        <a href = "" button class = "reset download-btn btn btn-success" id = 'reset'>Zaèni znova </a>
+                        
+                    </div>		
+                 </div>  
+                 
+             </div> <!-- End row -->
+            
+             
+          <script>
+              
+              $('#reset').click(function(e){
+                        e.preventDefault();
+                        sessionStorage.clear();
+                        location.replace('http://'+location.host+'slovenian_version/index.html');
+                        
+                    });
+                    
+              let now = new Date();
+						 let correctMonth = now.getMonth()+1;
+						 let surveyDate = now.getDate()+' - '+correctMonth+' - '+now.getFullYear();
+						 document.getElementById('dato').innerHTML = surveyDate;
+              // Get the array for the full version PDF 
+             let fullPDFQuestions = new Question();
+             let fullProfile1 = fullPDFQuestions.fullPDFdata(profile.questions,labelsarray,commentsArrProf1);
+				let fullProfile2 = fullPDFQuestions.fullPDFdata(profile2.questions,labelsarray,commentsArrProf2);
+				let fullProfile3 = fullPDFQuestions.fullPDFdata(profile3.questions,labelsarray, commentsArrProf3);
+            document.getElementById('manual-sub').addEventListener('click', function(e){
+                
+            
+            switch(sessionStorage.profileid){
+                
+                case '1':   
+                data2.setManualData();
+                sessionStorage.setItem('on_load_counter',7); 
+                
+                break;
+                case '2':
+                data3.setManualData();
+                sessionStorage.setItem('on_load_counter',7); 
+               
+                break;
+                case '3':
+                data5.setManualData();
+                sessionStorage.setItem('on_load_counter',7); 
+            
+                }
+                e.preventDefault();
+                location.replace('http://'+location.host+'/slovenian_version/index.html');
+               
+            });
+            document.getElementById('resultViewManual').innerHTML = data.setResultViewIdsDirect();  
+            
+
+            switch(sessionStorage.profileid){
+                case '1': data2.insertResultDirect();
+                
+                          break;
+                case '2': data3.insertResultDirect();
+                
+                          break;
+                case '3': data5.insertResultDirect();
+               
+               }
+           
+
+            var labels = new Label();
+            let view = document.getElementById("labelsView");
+            var labelsarr = labels.setLabels(view);
+            document.getElementById('resultViewDir').innerHTML = data.directResultViewId();
+
+            switch(sessionStorage.profileid){
+								case '1': data2.setDirectResults();
+													data2.setMobileResultView(labelsarray);
+													break;
+								case '2': data3.setDirectResults();
+													data3.setMobileResultView(labelsarray);
+													break;
+								case '3': data5.setDirectResults();
+													data5.setMobileResultView(labelsarray); 
+                             }
+                            
+
+                /*****Add eventlisteners to the inputfield*****/
+              
+             // Only allow digitis 0 - 4 
+             let input_control = new InputControl();
+             // Check for browser IE11
+             var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
+             var score_field = document.getElementsByClassName("manual-score");
+            
+             for(var i = 0; i< score_field.length; i++){
+                
+                 score_field[i].addEventListener('keydown',input_control.CheckNumberManual);
+                 score_field[i].addEventListener('keyup',input_control.CheckNumberManual);
+                 score_field[i].addEventListener('focus', input_control.emptyFieldOnFocus);
+                 score_field[i].addEventListener('focus', input_control.SetSelected);
+                 
+                 if(!isIE11){
+                    //Use the function if the browser is not IE11
+                 score_field[i].addEventListener('focus', input_control.emptyFieldOnFocus);
+                 
+                 }
+                 
+                 score_field[i].addEventListener('focusout',input_control.unDoHeighlight);
+                 
+             }
+                var chosenField = document.getElementsByClassName("next");
+             
+             for(var i = 0; i< chosenField.length; i++){
+                
+                 chosenField[i].addEventListener('mouseover',input_control.heiglightChosenField);
+                 chosenField[i].addEventListener('mouseout',input_control.unDoHeighlight);
+                 
+             }
+            /*****End Add eventlisteners to the inputfield*****/
+            viewHandler.getTaxomoniViewWidthNumbers();
+               let navigationObj = $('.clickevent');
+               event_control.clickableLabels(navigationObj);
+               
+                               
+              var ctx = document.getElementById('myChart').getContext('2d');
+              let PDF = new PrintToPdf(storedResults,storedResults2,storedResults3,labelsarray);
+              
+            //event_control.clickableLabels();
+              document.getElementById('download-pdf').addEventListener("click", PDF.downloadResultsOnly);
+              document.getElementById('download-full-pdf').addEventListener("click", PDF.downloadFullPDF);
+              
+             
+              let sizeOfLableFont = 13;
+						if(screen.width < 401){
+					sizeOfLableFont = 10;
+				}
+              Chart.defaults.global.defaultFontFamily = "Barlow Semi Condensed";
+				
+				
+				Chart.defaults.global.legend.position = 'bottom';
+				Chart.defaults.global.legend.display = false;
+				Chart.defaults.global.legend.labels.padding = 20;
+
+				
+				var chart = new Chart(ctx, {
+		// The type of chart we want to create
+						type: 'radar',
+						
+
+		// The data for our dataset
+	 				
+						data: {
+								labels: labelsarray,
+								datasets: [{
+								label:profile.get_profile_name() ,
+								backgroundColor: 'rgba(255,255, 255,0.0)',
+								borderColor: '#609fc2',
+								data: storedResults,
+								borderWidth: 3
+						},
+						{ 
+								label:profile2.get_profile_name() ,
+								backgroundColor: 'rgba(255, 255, 255,0.0)',
+								borderColor: '#dfab61',
+								data: storedResults2,
+								borderWidth: 2
+					 },
+					 { 
+								label:profile3.get_profile_name() ,
+								backgroundColor: 'rgba(255, 255, 255,0.0)',
+								borderColor: '#001b4d',
+								data: storedResults3,
+								borderDash: [10,5]
+					 } 
+				],   
+		},
+				// Configuration options go here
+				options: {
+					legendCallback: function(chart) {
+    					var text = [];
+    					text.push('<ul class = "chart-legend">');
+						let profBorderStyle = 'solid';
+    				for (var i=0; i<chart.data.datasets.length; i++) {
+						if(i == 2) {
+							profBorderStyle = 'dashed';
+						}
+      					console.log(chart.data.datasets[i]); // see what's inside the obj.
+     					 text.push('<span style = "font-size: 14px;" >' + chart.data.datasets[i].label + '</span>');
+      					text.push('<div style = "position: absolute;display: inline; border-bottom: 3px '+profBorderStyle +'; width: 40px; left:115px; margin-top: 15px; border-color: '+chart.data.datasets[i].borderColor+';"></div><li class = "legend">');
+     					 text.push('</li>');
+   					 }
+    				text.push('</ul>');
+    				return text.join("");
+ 					},
+					scale: {
+						ticks: {
+							beginAtZero: true,
+							max: 5,
+							fontFamily: 'Barlow Semi Condensed'
+						},
+						
+				pointLabels: {
+								fontSize: sizeOfLableFont,
+	},
+		},
+		responsive:true,
+				maintainAspectRatio: true,
+								 
+		 }
+});  
+document.getElementById('chart-legends').innerHTML = chart.generateLegend();
+            </script>
+          
+           <script>
+        
+           document.getElementById('download-pdf').addEventListener("click", PDF.downloadPDF);           
+
+            
+           </script>
+                </div>
+            </div> <!--En container-->
+        
+     <footer id = 'footer'>  </footer>
+             
+   <script> document.getElementById('footer').innerHTML = viewHandler.displayFooter();</script>
+
+<script type="text/javascript" src="pdfmake-master/build/pdfmake.min.js"></script>
+<script type="text/javascript" src="pdfmake-master/build/vfs_fonts.js"></script>
+        </body>
+</html>

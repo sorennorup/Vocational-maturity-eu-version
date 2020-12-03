@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>  
+    
+    <head>
+        <script src = "src/jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
+        <script src = "src/loadCounter.js"></script>
+        <script src = "src/InputControl.js"></script>
+        <script src = "src/Reset.js"></script>
+        
+        <script src = "src/Question.js"></script>
+        <script src = "src/Profile.js"></script>
+         <script src = "src/PrintToPdf.js"></script>
+        <script src = "src/Result.js"></script>
+        
+        <script src = "src/QuestionsDataModel.js"></script>
+         <script src = "src/Label.js"></script>
+       <script src = "src/EventsControl.js"></script>
+       
+        <link rel="stylesheet" type="text/css" href="style.css">
+    
+    </head>
+   
+        <body id = "print-body">
+            <div class = "container">
+                <h1>Vocational maturity</h1>
+                <p id = "intro-message"></p>
+                
+                <button id = 'profileid_1' class = "buttons" value = 1>Vejlederens vurdering</button>
+                <button id = 'profileid_2' class = "buttons" value = 2>Elevens vurdering</button>
+                
+             <!---   Start the form    --> 
+         <form name = "my-form" id = "question-form-one-que" style = "width:700px;" action= "oneAnswerSolution.html">
+            
+            <table id = "question-one-que"> <!-- Start table -->
+            
+            <tr>
+                <th style = "font-size:20px;" align = "left" id = "labelsView"> </th>
+                <th style = "font-size:20px;" align = "left">Questions</th>
+                <th style = "font-size:20px;">Score</th>    
+            </tr>                       
+    
+    <script>
+            
+             var data = new Result(id,1);
+             var data2 = new Result(id,1);
+             var data3 = new Result(id,2);
+              // Make the profilelinke active 
+             event_control.adClickedToButton();
+             event_control.addListenerToProfileLink();
+              
+             // Create the profile for the questions// Profile array is holding all the question of the profile
+             var profile2 = new Profile(profile_array[1],'Elevens vurdering', 2, labelsarray);
+             var profile = new Profile(profile_array[0],'Vejlederens Vurdering',1,labelsarray);
+             
+             // get the stored result for the Chart
+             var storedResults = profile.getResults(); 
+             var storedResults2 = profile2.getResults();
+             var profile_id = sessionStorage.profileid;
+
+             switch(profile_id){
+                // If profile id is empty then create a intro tekst
+                case undefined:
+                document.getElementById("intro-message").innerHTML = "Click on a profile below to start";
+                        break;
+                case '1':
+                profile.getQuestions();
+                        break;
+                case '2':
+                profile2.getQuestions();
+               
+             }
+              
+             // Only allow digitis 0 - 4 
+             let input_control = new InputControl();
+             
+             var score_field = document.getElementsByClassName("score");
+           
+             for(var i = 0; i< score_field.length; i++){
+                 score_field[i].addEventListener('keyup',input_control.controlNumInput);
+                 //score_field[i].addEventListener('focusin',input_control.heiglightChosenField);
+                 //score_field[i].addEventListener('focusout',input_control.unDoHeighlight);
+             }
+             var chosenField = document.getElementsByClassName("next");
+             
+             for(var i = 0; i< chosenField.length; i++){
+                
+                 chosenField[i].addEventListener('mouseover',input_control.heiglightChosenField);
+                 chosenField[i].addEventListener('mouseout',input_control.unDoHeighlight);
+             }
+    </script>    
+        
+            </table>   <!-- End the table -->
+        
+            <input id = "sub" style = "float:right;" type = "submit" value = "Next subject"/>
+
+         </form>
+         <script>
+           
+         </script>
+         <!-- End the form  -->
+         <button id = 'download-pdf'>Download to pdf</button>
+         <table id = 'results-view-for-pdf'></table>
+           <script>
+           var showid;
+            
+           $('#1').hide();
+           $('#2').hide();
+           $('#3').hide();
+           $('#4').hide();
+           $('#5').hide();
+           $('#6').hide();
+           if(sessionStorage.getItem('first_load') === null){
+                  
+          $('#'+1).show();
+         }
+          if(id < 6){
+            $('#1').show();
+         }
+           
+           document.getElementById('sub').addEventListener('click',function(){
+             showid = "#"+id;
+            
+                
+              // If the page is loaded for the first time, the id must be one 
+              if(sessionStorage.getItem('first_load') === null){
+                id = 1;
+                  
+               
+                // Set the next id to 2
+                sessionStorage.setItem('first_load',false);
+                sessionStorage.setItem('on_load_counter',2);
+               
+                if(profile_id == 1){
+                var data = new Result(id,1);
+                data.setData();
+               
+                }
+                if(profile_id == 2){
+
+                   var data4 = new Result(id,2);
+                    data4.setData();
+                    loadCounter();
+              }
+               
+              } else {
+                if(profile_id == 1){
+                    var data2 = new Result(id,1);
+                    data2.setData();
+                    loadCounter();
+              }
+              if(profile_id == 2){
+
+                    var data3 = new Result(id,2);
+                    data3.setData();
+                    loadCounter();
+              }
+              
+              }
+
+            });
+           
+            </script>
+             <div id = "for-print">
+                  <div id = "profilename"></div>
+                 
+                 <table id = "resultView"> </table>
+                 </div>
+             
+
+                 <div id = chartContainer>
+                 <canvas id = "myChartOneQuest"> </canvas> 
+              </div>
+                  </div> <!-- End container -->
+          <script>
+           
+            
+            var labels = new Label();
+            let view = document.getElementById("labelsView");
+            var labelsarr = labels.setLabels(view);
+
+           document.getElementById('results-view-for-pdf').innerHTML = data.resultsForPDF(storedResults,storedResults2,labelsarr) ; 
+           //event_control.clickableLabels();
+           document.getElementById('download-pdf').addEventListener("click", PDF.downloadPDF);
+
+           document.getElementById('profilename').innerHTML = "<h3>"+sessionStorage.profilename+"</h3>";
+            // Viewstuff
+            
+           document.getElementById('resultView').innerHTML = labelsarr+data.setResultViewIds();  
+               if(sessionStorage.profileid ==1){
+                
+                data.setResultView();
+   
+               }
+               
+               if(sessionStorage.profileid == 2){
+               
+                data3.setResultView();
+                
+               }
+               let navigationObj = $('.clickevent');
+               event_control.clickableLabels(navigationObj);
+              
+                
+        var ctx = document.getElementById('myChartOneQuest').getContext('2d');
+             
+           
+          </script>
+                          
+          <script>
+
+        var chart = new Chart(ctx, {
+    // The type of chart we want to create
+            type: 'radar',
+
+    // The data for our dataset
+   				
+            data: {
+                labels: labelsarray,
+                datasets: [{
+                label:profile.get_profile_name() ,
+               backgroundColor: 'rgba(255,255, 255,0.0)',
+                borderColor: 'rgb(255, 99, 132)',
+                data: storedResults
+            },
+       
+            { 
+                label:profile2.get_profile_name() ,
+                backgroundColor: 'rgba(255, 255, 255,0.0)',
+                borderColor: 'rgb(255, 100, 22)',
+                data: storedResults2
+
+           } 
+        ],   
+    },
+        // Configuration options go here
+        options: {
+                scale: {
+                ticks: {
+        beginAtZero: true,
+        max: 4,
+            
+        },
+        pointLabels: {
+                fontSize: 13,
+  },
+    },
+        maintainAspectRatio: false,
+                 
+     }
+});  
+    
+            </script>
+      
+<script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
+<script src="https://rawgit.com/someatoms/jsPDF-AutoTable/master/dist/jspdf.plugin.autotable.js"></script>
+        </body>
+ 
+</html>
