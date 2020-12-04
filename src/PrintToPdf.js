@@ -18,11 +18,11 @@ PrintToPdf = function(results1,results2,results3,labelarr){
 			table: {
 				headerRows: 1,
 				body: [labelarr,
-					[{text: 'Svetovanec',colSpan: 6, alignment: 'left',style: 'profile1Text'}],
+					[{text: 'Youth',colSpan: 6, alignment: 'left',style: 'profile1Text'}],
 					results1,
-					[{text: 'Cilj', colSpan: 6, alignment: 'left',style: 'profile2Text'}],
+					[{text: 'Goal', colSpan: 6, alignment: 'left',style: 'profile2Text'}],
 					results2,
-					[{text: 'Svetovalec',  colSpan: 6, alignment: 'left',style: 'profile3Text'}],
+					[{text: 'Professional',  colSpan: 6, alignment: 'left',style: 'profile3Text'}],
 					results3
 				]
 			},
@@ -36,16 +36,16 @@ PrintToPdf = function(results1,results2,results3,labelarr){
 		},
 		
 		
-		{text: 'Komentar',style: 'header2'},
+		{text: 'Comment',style: 'header2'},
 		
 		{
 		table: {	
 			body:[	
-					[{text: 'Svetovanec',alignment: 'left',style: 'profile1Text'}],
+					[{text: 'Youth',alignment: 'left',style: 'profile1Text'}],
 					[createCommentArray(commentsArrProf1)],
-					[{text: 'Cilj', alignment: 'left',style: 'profile2Text'}],
+					[{text: 'Goal', alignment: 'left',style: 'profile2Text'}],
 					[createCommentArray(commentsArrProf2)],
-					[{text: 'Svetovalec', alignment: 'left',style: 'profile3Text'}],
+					[{text: 'Professional', alignment: 'left',style: 'profile3Text'}],
 					[createCommentArray(commentsArrProf3)]
 			]
 		},
@@ -112,11 +112,11 @@ PrintToPdf = function(results1,results2,results3,labelarr){
 			table: {
 				headerRows: 1,
 				body: [labelarr,
-					[{text: 'Svetovanec',colSpan: 6, alignment: 'left',style: 'profile1Text'}],
+					[{text: 'Youth',colSpan: 6, alignment: 'left',style: 'profile1Text'}],
 					results1,
-					[{text: 'Cilj', colSpan: 6, alignment: 'left',style: 'profile2Text'}],
+					[{text: 'Goal', colSpan: 6, alignment: 'left',style: 'profile2Text'}],
 					results2,
-					[{text: 'Svetovalec',  colSpan: 6, alignment: 'left',style: 'profile3Text'}],
+					[{text: 'Professional',  colSpan: 6, alignment: 'left',style: 'profile3Text'}],
 					results3
 				]
 			},
@@ -129,7 +129,7 @@ PrintToPdf = function(results1,results2,results3,labelarr){
 		},
 		
 		 
-		{text: 'Svetovanec', style: 'header2'},
+		{text: 'Youth', style: 'header2'},
 			
 		
 		{
@@ -147,7 +147,7 @@ PrintToPdf = function(results1,results2,results3,labelarr){
 			layout: 'headerLineOnly'
 		},
 		
-		{text: 'Cilj', style: 'header2'},	
+		{text: 'Goal', style: 'header2'},	
 		
 		{
 			style: 'tableExample',
@@ -161,7 +161,7 @@ PrintToPdf = function(results1,results2,results3,labelarr){
 			
 			layout: 'headerLineOnly'
 		},
-		{text: 'Svetovalec', style: 'header2'},	
+		{text: 'Professional', style: 'header2'},	
 		
 		{
 			style: 'tableExample',

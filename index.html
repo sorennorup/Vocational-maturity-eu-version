@@ -40,7 +40,18 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     
     </head>
+    <script>
+        (function setName() {
+        if(sessionStorage.getItem('firstload')===null){
+            name = prompt('INSERT YOUR NAME HERE \n\n Your personal data will not be saved or shared. Use Chrome, Firefox or safari','');
+            sessionStorage.setItem('firstload','true');
+            sessionStorage.setItem('name',name);
+            window.location.reload();
+
+        }
+    })();
     
+    </script>
     <body id = "print-body">
         <div class = "container">
             <div class = "row">
@@ -55,20 +66,20 @@
                   <a class="card-header" id="accordion__heading">
                     <h5 class="mb-0">
                       <div id = "collapse-id"  class="" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                        O METODI 
+                     ABOUT 
                       </div>
                     </h5>
                 </a>
 
                   <div id="collapseOne" class="collapse hide" aria-labelledby="accordion__heading" data-parent="#accordion">
                     <div id = 'accordion__body' class="card-body">
-                        <p>Z uporabo spletnega orodja želimo spodbuditi tvoje razmišljanje na temo poklicne zrelosti. Ko ovrednotiš 30 trditev znotraj 6. podroèij (rezilientnost, motivacija, doloèanje ciljev, trg dela in delovno okolje, prilagodljivost, poklicne vešèine), bodo tvoji odgovori prikazani pisno in v obliki diagrama. Odgovori niso »pravilni« ali »napaèni« ampak zgolj odražajo tvojo trenutno situacijo in ti pomagajo prepoznati možnosti za nadaljnji razvoj. Diagram spominja na radar ali pajèevino.</p>
+                        <p>Text for the about section</p>
 
-                        <p>Poklicna zrelost predstavlja tvoje izhodišèe in potencial ob zaèetku praktiènega usposabljanja, pripravništva ali zaposlitve. Enak razmislek velja pred (ponovnim) vkljuèevanjem v programe poklicnega in strokovnega izobraževanja, še posebej vajeništva.</p>
+                        <p></p>
 
-                        <p>Reševanje ti bo vzelo približno 20 minut. Tvoji odgovori ne bodo shranjeni ali posredovani drugim. Èe želiš, lahko tvoje odgovore tudi natisneš. Želimo ti vse dobro na poti do tvoje poklicne zrelosti!</p>
+                        <p></p>
 
-                        <p>Za vsako od 30. trditev oznaèi, v kolikšni meri veljajo zate, tako da izbereš enega od spodnjih šestih odgovorov.</p>
+                        <p></p>
                         
                        <!-- <span>For professionelle: L?s mere i <a style = "color: #5593c2" href = "TOOL-Erhvervsparathed2020-april.pdf" target = "_blank"> Guide for anvendelse.</a></span>-->
                     </div>
@@ -89,12 +100,7 @@
                 
              </script>
         </div>  
-        
-        <!--<form action = "index.html" id = "name-input" >
-        <input id = "name-field" type = "text" name ="namevalue" placeholder="Indtast Tvoje ime " value = "" />
-        
-        </form>
-        <a href="#" class = "btn">GEM</a>-->
+
 <script>
    /* sessionStorage.setItem('username',$("input[name='namevalue']").val());
     $('#name-field').val(sessionStorage.getItem('username'));
@@ -135,9 +141,9 @@
             event_control.addListenerToProfileLink();
                                              
             // Create the profile for the questions// Profile array is containing all the questions of the profile
-            var profile2 = new Profile(profile_array[1],'Cilj', 2, labelsarray);
-            var profile = new Profile(profile_array[0],'Svetovanec',1,labelsarray);
-            var profile3 = new Profile(profile_array[2],'Svetovalec',3,labelsarray);
+            var profile2 = new Profile(profile_array[1],'Goal', 2, labelsarray);
+            var profile = new Profile(profile_array[0],'Youth',1,labelsarray);
+            var profile3 = new Profile(profile_array[2],'Professional',3,labelsarray);
                      
              // Get the array for the full version PDF 
             let fullPDFQuestions = new Question();
@@ -193,8 +199,8 @@
                 
                 
             </script>
-                 <textarea class = "form-control" id = "text-add" placeholder="Komentar"></textarea>
-                 <input id = "sub" class = " sub btn-success" id = 'new-top' type = "submit" value = "Nadaljuj"/>
+                 <textarea class = "form-control" id = "text-add" placeholder="Additional remarks"></textarea>
+                 <input id = "sub" class = " sub btn-success" id = 'new-top' type = "submit" value = "Next"/>
              <!----------***** End Commentbox stuff *****------------->
             <div class = "container btn-container">
             
@@ -270,7 +276,7 @@
                                     <div class = "name-and-date">
                                     <p id = "dato"></p>
                                     
-                                    <h3 id = "your-name">Tvoje ime </h3>
+                                    <h3 id = "your-name"> </h3>
                                     
                                 </div>
                                             <table  id = "resultView"> </table>
@@ -281,9 +287,9 @@
                      let correctMonth = now.getMonth()+1;
                      let surveyDate = now.getDate()+'.  '+correctMonth+'. '+now.getFullYear();
                      document.getElementById('dato').innerHTML = surveyDate;
-                     
+                     newView.setMyName();
                     </script>
-                    
+                        
                         <div id = "resultMobileView"></div>
                         <div id = chartContainer>
                                 <canvas id = "myChart"> </canvas>
@@ -292,7 +298,7 @@
                         </div>
                         
                         <div id = "comment-view">
-                            <h3 class = "comment-view__title">Komentar</h3>
+                            <h3 class = "comment-view__title">Additional remarks</h3>
                             <table class = "comment-view__labels"></table>
                         </div>
                             </div>
@@ -305,9 +311,9 @@
                      
                       <!-- End row -->
                      <div class = 'download-button-container'>
-                        <button class = "download-btn btn-success " id = 'download-pdf'>Izvozi v PDF </button>    
-                        <button class = " download-btn btn-success " id = 'download-full-pdf'>Izvozi v PDF (celotna razlièica)</button>
-                        <a href = "" button class = "reset download-btn btn btn-success" id = 'reset'>Zaèni znova </a>
+                        <button class = "download-btn btn-success " id = 'download-pdf'>DOWNLOAD  </button>    
+                        <button class = " download-btn btn-success " id = 'download-full-pdf'>DOWNLOAD WITH DETAILS </button>
+                        <a href = "" button class = "reset download-btn btn btn-success" id = 'reset'>START OVER </a>
                         
                     </div>	
                                 </div> <!-- End container -->

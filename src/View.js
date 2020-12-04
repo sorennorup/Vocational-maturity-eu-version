@@ -10,9 +10,9 @@ View = function(){
 	
 	this.displayProfileButtons = function(){
 		let html = ' <div class = "profile-buttons">'+
-		   '<button id = "profileid_1" class = "btn-success profile-menu-item" value = 1>Svetovanec</button>'+
-		   '<button id = "profileid_2" class = "btn-success profile-menu-item" value = 2>Cilj</button>'+
-		   '<button id = "profileid_3" class = "btn-success profile-menu-item" value = 3>Svetovalec</button>'+
+		   '<button id = "profileid_1" class = "btn-success profile-menu-item" value = 1>Youth</button>'+
+		   '<button id = "profileid_2" class = "btn-success profile-menu-item" value = 2>Goal</button>'+
+		   '<button id = "profileid_3" class = "btn-success profile-menu-item" value = 3>Professional</button>'+
 	   '    </div>';
 	   return html;
 	}
@@ -47,13 +47,13 @@ View = function(){
 		 let html = '<div id = "info-box">'+
 			   ' <a style = "" class = "" href = "index.html">Odgovori na vprašanja</a><br/> Neposredno vstavi rezultate od 0 – 5, na eno decimalko (npr. 1.4) </div>'+
 				'<form action = "resultInsert.html"><div class = "manualView"  id = "resultViewManual"> </div>'+         
-				'<input id = "manual-sub"  class = "btn btn-success" type = "submit" value= "Nadaljuj" /></form>';
+				'<input id = "manual-sub"  class = "btn btn-success" type = "submit" value= "Next" /></form>';
 		 return html;
 	 };
 
 	 this.displayInfoMessage = function(){
 		  let message = 
-			 '<a style = " z-index:9999; color: #71b7df; text-decoration: underline;"  href = "resultInsert.html"> Preskoèi vprašanja      </a>'+
+			 '<a style = " z-index:9999; color: #71b7df; text-decoration: underline;"  href = "resultInsert.html"> Skip questions'+
 			   ' <br/>'+
 			   ' <a style = " z-index:9999; color: #71b7df;" href = "measure.html"></a>';
 		return message;
@@ -67,6 +67,10 @@ View = function(){
 
 	this.getBackAndForward = function(){
 		document.getElementById('back-and-forward').innerhtml = this.setBackAndForward();
+	}
+
+	this.setMyName = function() {
+		document.getElementById('your-name').innerHTML = sessionStorage.getItem('name');
 	}
 
 	this.displayFooter = function(){

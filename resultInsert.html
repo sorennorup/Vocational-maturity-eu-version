@@ -51,20 +51,20 @@
           <a class="card-header" id="accordion__heading">
             <h5 class="mb-0">
               <div id = "collapse-id" class="" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                O METODI
+                ABOUT
               </div>
             </h5>
         </a>
 
           <div id="collapseOne" class="collapse hide" aria-labelledby="accordion__heading" data-parent="#accordion">
             <div id = 'accordion__body' class="card-body">
-              <p>Z uporabo spletnega orodja želimo spodbuditi tvoje razmišljanje na temo poklicne zrelosti. Ko ovrednotiš 30 trditev znotraj 6. podroèij (rezilientnost, motivacija, doloèanje ciljev, trg dela in delovno okolje, prilagodljivost, poklicne vešèine), bodo tvoji odgovori prikazani pisno in v obliki diagrama. Odgovori niso »pravilni« ali »napaèni« ampak zgolj odražajo tvojo trenutno situacijo in ti pomagajo prepoznati možnosti za nadaljnji razvoj. Diagram spominja na radar ali pajèevino.</p>
+              <p></p>
 
-                        <p>Poklicna zrelost predstavlja tvoje izhodišèe in potencial ob zaèetku praktiènega usposabljanja, pripravništva ali zaposlitve. Enak razmislek velja pred (ponovnim) vkljuèevanjem v programe poklicnega in strokovnega izobraževanja, še posebej vajeništva.</p>
+                        <p></p>
 
-                        <p>Reševanje ti bo vzelo približno 20 minut. Tvoji odgovori ne bodo shranjeni ali posredovani drugim. Èe želiš, lahko tvoje odgovore tudi natisneš. Želimo ti vse dobro na poti do tvoje poklicne zrelosti!</p>
+                        <p></p>
 
-                        <p>Za vsako od 30. trditev oznaèi, v kolikšni meri veljajo zate, tako da izbereš enega od spodnjih šestih odgovorov.</p>
+                        <p></p>
             </div>
           </div>
         </div>
@@ -99,7 +99,7 @@
             </tr>
     
     <script>
-           
+          
             // Init dataobjects
              var data = new Result(id,1);
              var data2 = new Result(id,1);
@@ -111,15 +111,16 @@
              event_control.addListenerToProfileLink();
                          
             // Create the profile for the questions// Profile array is containing all the questions of the profile
-             var profile2 = new Profile(profile_array[1],'Cilj', 2, labelsarray);
-             var profile = new Profile(profile_array[0],'Svetovanec',1,labelsarray);
-             var profile3 = new Profile(profile_array[2],'Svetovalec',3,labelsarray);
+             var profile2 = new Profile(profile_array[1],'Goal', 2, labelsarray);
+             var profile = new Profile(profile_array[0],'Youth',1,labelsarray);
+             var profile3 = new Profile(profile_array[2],'Professional',3,labelsarray);
 
              // get the stored result for the Chart
              var storedResults = profile.getResults(); 
              var storedResults2 = profile2.getResults();
              var storedResults3 = profile3.getResults();
              var profile_id = sessionStorage.profileid;
+            
                 
     </script>
             
@@ -144,7 +145,7 @@
                     <div class="panel-body">
                         <div class = "name-and-date">
                             <p id = "dato"></p>
-                            <h3>Tvoje ime </h3>
+                            <h3 id = "your-name"> </h3>
                         </div>
                     <table  id = "resultViewDir"> </table>
                     <div id = "resultMobileView"></div>
@@ -155,9 +156,9 @@
                   <div id = "chart-legends"></div>
                 </div>
                 <div class = 'download-button-container'>
-                        <button class = "download-btn btn-success " id = 'download-pdf'>Izvozi v PDF </button>    
-                        <button class = " download-btn btn-success " id = 'download-full-pdf'>Izvozi v PDF (celotna razlièica)</button>
-                        <a href = "" button class = "reset download-btn btn btn-success" id = 'reset'>Zaèni znova </a>
+                        <button class = "download-btn btn-success " id = 'download-pdf'>DOWNLOAD  </button>    
+                        <button class = " download-btn btn-success " id = 'download-full-pdf'>DOWNLOAD WIDTH DETAILS</button>
+                        <a href = "" button class = "reset download-btn btn btn-success" id = 'reset'>START OVER </a>
                         
                     </div>		
                  </div>  
@@ -166,6 +167,7 @@
             
              
           <script>
+             newView.setMyName();
               
               $('#reset').click(function(e){
                         e.preventDefault();

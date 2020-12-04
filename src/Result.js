@@ -69,7 +69,7 @@ let Result = function(id,profile_id){
 			}
 			
 			resstr += '<div class = "light-font-color">'+this.labelsarray[i];
-			resstr += '<div class = "manual-res"><div id = "'+this.res_array[i]+'"></div><textarea class = "form-control form-control-direct" id = "text-add" placeholder="Komentar">'+com+'</textarea></div>' ;
+			resstr += '<div class = "manual-res"><div id = "'+this.res_array[i]+'"></div><textarea class = "form-control form-control-direct" id = "text-add" placeholder="Additional remarks">'+com+'</textarea></div>' ;
 		}
 		
 		return resstr;

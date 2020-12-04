@@ -21,7 +21,7 @@ Label = function(){
 	}; 
 
 	this.setCommentViewLabels = function(){
-		let profiles = ['Svetovanec','Cilj','Svetovalec'];
+		let profiles = ['Youth','Goal','Professional'];
 		let comments = [commentsArrProf1,commentsArrProf2,commentsArrProf3];
 		var labelarr = [
 		"Resilience",
