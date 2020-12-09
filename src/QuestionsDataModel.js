@@ -124,7 +124,7 @@ for(var key in inputvalue){
    questionArray[0] = new question(comment1_1,"I do not give up, I try again.",inputvalue[key].val1[0]);
    questionArray[1]=  new question(comment1_2,"I recognize my mistakes and correct them.",inputvalue[key].val1[1]);
    questionArray[2] = new question( comment1_3,"If I am stuck, I ask for help. ",inputvalue[key].val1[2]);
-   questionArray[3] = new question( comment1_4,"•	I maintain supportive relationships.",inputvalue[key].val1[3]);
+   questionArray[3] = new question( comment1_4,"I maintain supportive relationships.",inputvalue[key].val1[3]);
  
   // Motivation 
    questionArray2 = [];
@@ -139,7 +139,7 @@ for(var key in inputvalue){
    questionArray3[0] = new question(comment3_1,	"I understand my decisions can affect my future"	,inputvalue[key].val3[0]);
    questionArray3[1]= new question(comment3_2,	"I can cope with challenges to achieve my goals. ",inputvalue[key].val3[1]);
    questionArray3[2] = new question(comment3_3,"I explore different options to achieve my goals.",inputvalue[key].val3[2]);
-   questionArray3[3] = new question(comment3_4,"•	I can make plans for the future.",inputvalue[key].val3[3]);
+   questionArray3[3] = new question(comment3_4,"I can make plans for the future.",inputvalue[key].val3[3]);
 
  // Flexibility
    questionArray4 = [];

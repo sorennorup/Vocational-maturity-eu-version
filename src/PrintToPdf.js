@@ -11,8 +11,8 @@ PrintToPdf = function(results1,results2,results3,labelarr){
 		pdfMake.setFonts(fonts);
 		var dd = {
 			content: [
-				{ text: 'Poklicna zrelost', style: 'header' },
-				{ text: '-samoevalvacija s pogovorom', style: 'header2' },
+				{ text: 'Vocational maturity', style: 'header' },
+				{ text: '- self-evaluation in dialogue', style: 'header2' },
 			{
 			style: 'tableExample',
 			table: {
@@ -35,23 +35,8 @@ PrintToPdf = function(results1,results2,results3,labelarr){
 		margin: [-90, 0]
 		},
 		
-		
-		{text: 'Comment',style: 'header2'},
-		
 		{
-		table: {	
-			body:[	
-					[{text: 'Youth',alignment: 'left',style: 'profile1Text'}],
-					[createCommentArray(commentsArrProf1)],
-					[{text: 'Goal', alignment: 'left',style: 'profile2Text'}],
-					[createCommentArray(commentsArrProf2)],
-					[{text: 'Professional', alignment: 'left',style: 'profile3Text'}],
-					[createCommentArray(commentsArrProf3)]
-			]
-		},
 		
-		layout: 'noBorders',
-		style: 'commenttext'
 	}
 	],
 
@@ -104,8 +89,8 @@ PrintToPdf = function(results1,results2,results3,labelarr){
 		pdfMake.setFonts(fonts);
 		var dd = {	
 			content: [
-				{ text: 'Poklicna zrelost', style: 'header' },
-				{ text: '-samoevalvacija s pogovorom', style: 'header2' },
+				{ text: 'Vocational maturity', style: 'header' },
+				{ text: '-- self-evaluation in dialogue ', style: 'header2' },
 		
 			{
 			style: 'tableExample',

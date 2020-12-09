@@ -785,7 +785,7 @@ th {
 	
 }*/
 /*** Logo footer ***/
-.logos {
+.logos, .logos__first {
 	/*max-width: 1400px !important;*/	
 	filter: grayscale(1.0);
 	display: flex;
@@ -793,17 +793,16 @@ th {
 	justify-content: center;
 }
 
+.logos__first {
+	margin-bottom: 20px;
+}
+
 .footer-logo {
 	display: flex;
 	display: inline-block;
-}
-
-.footer-logo:first-child {
-	margin-right: 10px;
-}
-
-.footer-logo:nth-last-child(3){
-	margin-left: 10px;
+	justify-content: space-around;
+	width: 130px;
+	margin-left: 20px;
 }
 
 #footer-links {

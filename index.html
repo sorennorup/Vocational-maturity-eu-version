@@ -41,6 +41,7 @@
     
     </head>
     <script>
+
         (function setName() {
         if(sessionStorage.getItem('firstload')===null){
             name = prompt('INSERT YOUR NAME HERE \n\n Your personal data will not be saved or shared. Use Chrome, Firefox or safari','');
@@ -70,23 +71,20 @@
                       </div>
                     </h5>
                 </a>
+               
 
                   <div id="collapseOne" class="collapse hide" aria-labelledby="accordion__heading" data-parent="#accordion">
                     <div id = 'accordion__body' class="card-body">
-                        <p>Text for the about section</p>
-
-                        <p></p>
-
-                        <p></p>
-
-                        <p></p>
+                        
                         
                        <!-- <span>For professionelle: L?s mere i <a style = "color: #5593c2" href = "TOOL-Erhvervsparathed2020-april.pdf" target = "_blank"> Guide for anvendelse.</a></span>-->
                     </div>
                   </div>
                 </div>
             </div>	
-            
+            <script>
+                document.getElementById('accordion__body').innerHTML = newView.setAboutText();
+            </script>
         <div class = "row">
         <div id = 'tax-view' class = "tax-container"></div>
             
@@ -111,7 +109,7 @@
         document.getElementById('display-profile-btn').innerHTML = newView.displayProfileButtons();
 </script>
          <!---   Start the form    --> 
-         <div id = "questionnaire">
+        <div id = "questionnaire">
         <div id = "new-top"></div>
         
         <div id = "questionnaire-inner">
@@ -186,17 +184,13 @@
                     let widthVal = String(range_value[i].value*10*2+'%');
                     range_slider.setRangeSlider(i,range_value[i].value,range_value.length);	
                 }	
-                
-                
-         </script>
+    </script>
          
             </div>   <!-- End question box -->
-        
             
             <script>
                 document.getElementById("back-and-forward").innerHTML = viewHandler.setBackAndForward();
     // Create the viewobject
-                
                 
             </script>
                  <textarea class = "form-control" id = "text-add" placeholder="Additional remarks"></textarea>
