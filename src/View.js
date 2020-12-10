@@ -3,7 +3,7 @@ View = function(){
 	this.taxomoni = ['Not important ','Want to', 'Just started ','Working on it', 'Doing quite well','Succeded'];
 
 	this.setTitle = function(){
-		let html = '<h1>Vocational maturity  <br/><span style = "text-transform:lowercase; font-size: 1.9rem;">- self-evaluation in dialogue </span> </h1>';
+		let html = '<h1>Vocational maturity  <br/><span style = " font-size: 1.63rem;">a self-evaluation in dialogue </span> </h1>';
 		document.getElementById('title').innerHTML = html;
 	}
 	
@@ -78,7 +78,7 @@ View = function(){
 	}
 
 	this.setMyName = function() {
-		document.getElementById('your-name').innerHTML = sessionStorage.getItem('name');
+		document.getElementById('your-name').innerHTML = 'Your name'
 	}
 
 	this.displayFooter = function(){
@@ -89,7 +89,7 @@ View = function(){
 						
 						
 						
-					'</div>';
+					'</div><br/>';
 		html +=	 '<div class = " container logos">  '+  
 						'<img class = "footer-logo"  src = "logoer/Cene_stupar.png"  />'+
 
@@ -114,11 +114,11 @@ View = function(){
 						
 						'<br><a href = "https://youth-it.cool/" target="_blank" class = "footer-arrow footer-link-project">Youth in transition</a>'+
 						'<a href = "https://ungemedkant.dk/toolbox/erhvervsparathed/" class = "footer-arrow footer-link-project">Erhvervsparathed (Danish version)</a>'+
-						'<a href = "https://poklicnazrelost.cene-stupar.si/" class = "footer-arrow footer-link-project">Cene štupar</a>'
+						'<a href = "https://poklicnazrelost.cene-stupar.si/" class = "footer-arrow footer-link-project">Slovenian version</a>'
 						
 							'</div>';
 			html += '<div id = "footer__meta-info">'+
-			         '<p class = "footer__title">Vocational maturity - self-evaluation in dialogue</p>'+
+			         '<p class = "footer__title">Vocational maturity a self-evaluation in dialogue</p>'+
                    
 					'<br/><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.'+
 					'</div>';
