@@ -14,7 +14,7 @@ View = function(){
 		"<p>A series of statements, divided into 6 thematic sections, are answered through self-evaluation. The self-evaluation is supported by a professional counselor, teacher or other relevant professional.  </p>"+
 		"<p>The results create a visual profile. This profile is individual and valid only for the counselee's current situation. The counselee will always be able to further develop and change his/her situation. </p>"+
 		"<p>This tool is an artificial generic version, not meant to be applied to practice, but meant to be considered for the elaboration of local versions of a tool. Adaptation is necessary to meet local needs and conditions. </p>"+
-		"<p>Typically, completion will take approx. 20 minutes. The optional functionality 'Your name' is activated in the country versions. The individual data and profile will not be saved or forwarded to others. It is possible to print the profile and the answers locally, if desirable.</p>"+
+		"<p>Typically, completion will take approx. 20 minutes. The optional functionality 'Your name' is activated in the country versions. The individual data and profile will not be saved or forwarded to others. It is possible to print the profile and the answers locally, if desirable.</p><br/>"+
 		"<p><strong>ADDITIONAL INFORMATION</strong></p>"+
 		"<p>The tool is tested broadly in Denmark, Slovenia and Iceland, quality assured by researchers from the University of Hamburg. </p>"+
 		"<p>The validity of the tool is dependent on the pedagogical and ethical application during a professional counseling process. </p>"+
@@ -70,7 +70,7 @@ View = function(){
 	 
 	 this.displayManualInputView = function(){
 		 let html = '<div id = "info-box">'+
-			   ' <a style = "" class = "" href = "index.html">Answer with questions</a><br/> Neposredno vstavi rezultate od 0 – 5, na eno decimalko (npr. 1.4) </div>'+
+			   ' <a style = "" class = "" href = "index.html">Answer with questions</a><br/> Score on a scale of 0-5 (decimals are possible) </div>'+
 				'<form action = "resultInsert.html"><div class = "manualView"  id = "resultViewManual"> </div>'+         
 				'<input id = "manual-sub"  class = "btn btn-success" type = "submit" value= "Next" /></form>';
 		 return html;

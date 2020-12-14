@@ -132,18 +132,18 @@ for(var key in inputvalue){
    questionArray2[1]= new question(comment2_2,"I complete the tasks agreed upon",inputvalue[key].val2[1]);
    questionArray2[2]= new question(comment2_3,"I keep my word ",inputvalue[key].val2[2]);
    questionArray2[3]= new question(comment2_4,"I show up on time",inputvalue[key].val2[3]);
-   questionArray2[4]= new question(comment2_5,"I work diligently even on tasks that do not interest me",inputvalue[key].val2[4]);
+   questionArray2[4]= new question(comment2_5,"I work hard even on tasks that do not interest me",inputvalue[key].val2[4]);
  
 // Setting Goals
    questionArray3 = [];
-   questionArray3[0] = new question(comment3_1,	"I understand my decisions can affect my future"	,inputvalue[key].val3[0]);
+   questionArray3[0] = new question(comment3_1,	"I understand that my decisions can affect my future"	,inputvalue[key].val3[0]);
    questionArray3[1]= new question(comment3_2,	"I can cope with challenges to achieve my goals. ",inputvalue[key].val3[1]);
    questionArray3[2] = new question(comment3_3,"I explore different options to achieve my goals.",inputvalue[key].val3[2]);
    questionArray3[3] = new question(comment3_4,"I can make plans for the future.",inputvalue[key].val3[3]);
 
  // Flexibility
    questionArray4 = [];
-   questionArray4[0] = new question(comment4_1,"I can gather information about relevant workplaces or trades. "	,inputvalue[key].val4[0]);
+   questionArray4[0] = new question(comment4_1,"I can relocate for a job or for an education. "	,inputvalue[key].val4[0]);
    questionArray4[1]= new question(comment4_2,"I can adapt to different situations at the workplace. ",inputvalue[key].val4[1]);
    questionArray4[2] = new question(comment4_3,"I am able to change my views and decisions.",inputvalue[key].val4[2]);
    questionArray4[3] = new question(comment4_4,"I am able to switch between different work tasks.",inputvalue[key].val4[3]);
@@ -151,7 +151,7 @@ for(var key in inputvalue){
 // Social norms
    questionArray5 = [];
    questionArray5[0] = new question(comment5_1,"I can gather information about relevant workplaces or trades. "	,inputvalue[key].val5[0]);
-   questionArray5[1] = new question(comment5_2,"I can adapt to a workplace and follow the instructions."	,inputvalue[key].val5[1]);
+   questionArray5[1] = new question(comment5_2,"I can adapt to a workplace and follow instructions."	,inputvalue[key].val5[1]);
    questionArray5[2] = new question(comment5_3,"I can cooperate with most people."	,inputvalue[key].val5[2]);
    questionArray5[3] = new question(comment5_4,"I am able to cope with disagreements."	,inputvalue[key].val5[3]);
    questionArray5[4]= new question(comment5_5,	"I am able to see when something is wrong at the workplace.",inputvalue[key].val5[4]);
@@ -160,9 +160,9 @@ for(var key in inputvalue){
    // Professional Skills
    questionArray6 = [];
    questionArray6[0] = new question(comment6_1,"I have the required professional skills."	,inputvalue[key].val6[0]);
-   questionArray6[1]= new question(comment6_2,	"I am open to further develop my professional skills.",inputvalue[key].val6[1]);
+   questionArray6[1]= new question(comment6_2,	"I am open to continuing to  develop my professional skills.",inputvalue[key].val6[1]);
    questionArray6[2] = new question(comment6_3,"I can take contact to a workplace in an appropriate way.",inputvalue[key].val6[2]);
-   questionArray6[3] = new question(comment6_4,"I am obligated to my workplace.",inputvalue[key].val6[3]);
+   questionArray6[3] = new question(comment6_4,"I am committed to my workplace.",inputvalue[key].val6[3]);
    questionArray6[4] = new question(comment6_5,"I am ready to change job or trade, if necessary.",inputvalue[key].val6[4]);
   
    var prop = [questionArray,questionArray2,questionArray3,questionArray4,questionArray5,questionArray6];

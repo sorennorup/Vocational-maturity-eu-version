@@ -12,7 +12,7 @@ PrintToPdf = function(results1,results2,results3,labelarr){
 		var dd = {
 			content: [
 				{ text: 'Vocational maturity', style: 'header' },
-				{ text: '- self-evaluation in dialogue', style: 'header2' },
+				{ text: 'a self-evaluation in dialogue', style: 'header2' },
 			{
 			style: 'tableExample',
 			table: {
@@ -90,7 +90,7 @@ PrintToPdf = function(results1,results2,results3,labelarr){
 		var dd = {	
 			content: [
 				{ text: 'Vocational maturity', style: 'header' },
-				{ text: '-- self-evaluation in dialogue ', style: 'header2' },
+				{ text: 'a self-evaluation in dialogue ', style: 'header2' },
 		
 			{
 			style: 'tableExample',
