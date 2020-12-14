@@ -10,17 +10,17 @@ View = function(){
 	this.setAboutText = function() {
 		let html = "<p>This tool makes it possible to create a profile of vocational maturity.</p>"+
 		"<p>Vocational maturity reflects the competencies and potentials that are necessary for starting in and retaining a job or an internship. This can also be true for starting in a vocational program and during the education. </p><br/>"+
-		"<p><b>PROCEDURE</b></p>"+
+		"<h3>PROCEDURE</h3>"+
 		"<p>A series of statements, divided into 6 thematic sections, are answered through self-evaluation. The self-evaluation is supported by a professional counselor, teacher or other relevant professional.  </p>"+
 		"<p>The results create a visual profile. This profile is individual and valid only for the counselee's current situation. The counselee will always be able to further develop and change his/her situation. </p>"+
 		"<p>This tool is an artificial generic version, not meant to be applied to practice, but meant to be considered for the elaboration of local versions of a tool. Adaptation is necessary to meet local needs and conditions. </p>"+
 		"<p>Typically, completion will take approx. 20 minutes. The optional functionality 'Your name' is activated in the country versions. The individual data and profile will not be saved or forwarded to others. It is possible to print the profile and the answers locally, if desirable.</p><br/>"+
-		"<p><strong>ADDITIONAL INFORMATION</strong></p>"+
+		"<h3>ADDITIONAL INFORMATION</strong></h3>"+
 		"<p>The tool is tested broadly in Denmark, Slovenia and Iceland, quality assured by researchers from the University of Hamburg. </p>"+
 		"<p>The validity of the tool is dependent on the pedagogical and ethical application during a professional counseling process. </p>"+
 		"<p>Read more about youth progression, as well as background of the tool and pedagogical recommendations for the counseling process: <a style='color: #5593c2' href= 'youth-it.cool'>youth-it.cool</a> </p>"+
 		"<p> Download brochure 'Youth in transition' </p><br/>"+
-		"<p><b>NATIONAL VERSIONS OF THE TOOL</b></p>"+
+		"<h3>NATIONAL VERSIONS OF THE TOOL</h3>"+
 		"<a style='color: #5593c2' href = 'https://ungemedkant.dk/toolbox/erhvervsparathed/'>Denmark</a><br/>"+
 		"<a style='color: #5593c2' href = 'https://poklicnazrelost.cene-stupar.si/'>Slovenia</a><br/>"+
 		"<a style='color: #5593c2' href = '#'>Iceland</a><br/>"
