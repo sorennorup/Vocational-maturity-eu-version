@@ -19,7 +19,7 @@ View = function(){
 		"<p>The tool is tested broadly in Denmark, Slovenia and Iceland, quality assured by researchers from the University of Hamburg. </p>"+
 		"<p>The validity of the tool is dependent on the pedagogical and ethical application during a professional counseling process. </p>"+
 		"<p>Read more about youth progression, as well as background of the tool and pedagogical recommendations for the counseling process: <a style='color: #5593c2' href= 'youth-it.cool'>youth-it.cool</a> </p>"+
-		"<p> Download brochure 'Youth in transition' </p><br/>"+
+		//"<p> Download brochure 'Youth in transition' </p><br/>"+
 		"<h3>NATIONAL VERSIONS OF THE TOOL</h3>"+
 		"<a style='color: #5593c2' href = 'https://ungemedkant.dk/toolbox/erhvervsparathed/'>Denmark</a><br/>"+
 		"<a style='color: #5593c2' href = 'https://poklicnazrelost.cene-stupar.si/'>Slovenia</a><br/>"+
