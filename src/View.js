@@ -116,9 +116,6 @@ View = function(){
 
 						'<img class = "footer-logo"  src = "logoer/moeve.png" width = "140"  />'+
 
-						'<img class = "footer-logo"  src = "logoer/kolding.png" width = "140"  />'+
-						'<img class = "footer-logo"  src = "logoer/odsherred-1.png" width = "100"   />'+
-
 						'<img class = "footer-logo"  src = "logoer/UHH.png"  />'+
 						'<img class = "footer-logo"  src = "logoer/vmst.png"   />'+
 						
