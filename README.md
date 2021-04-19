@@ -1,6 +1,5 @@
 # europe_version
 
-</style>
 <h2>Vocational maturity – an interactive online tool for self-evaluation vs. 29th March</h2>
 
 <p>The interactive online tool for NEETs´ self-evaluation of vocational maturity was developed in a cross-national and cross-professional process in the framework of the European KA2 project “Youth in transition” (October 2018 – March 2021).</p>
