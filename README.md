@@ -58,9 +58,9 @@ You will find the text for the Profiles in the View.js, printToPdf.js.
 
 <h3>Text for the taxamonies</h3>
 
-Is found I View.js, QuestionsDataModel.js, RangeSlider.js
+Is found I  View.js, QuestionsDataModel.js, RangeSlider.js
 
-</h3>About text</h3>
+<h3>About text</h3>
 
 Is found in the two main files
 
