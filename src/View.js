@@ -110,7 +110,7 @@ View = function(){
 		html +=	 '<div class = " container logos">  '+  
 						'<img class = "footer-logo"  src = "logoer/Cene_stupar.png"  />'+
 
-						'<img class ="footer-logo"  src = "logoer/CPI.png"  />'+
+						'<img class ="footer-logo"  src = "logoer/CGP_ENG_primarni_splet_S_pravi.png"  />'+
 
 						'<img class = "footer-logo"   src = "logoer/UUDK-logo-300W.png"   />'+
 
