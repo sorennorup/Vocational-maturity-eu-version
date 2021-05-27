@@ -22,7 +22,7 @@ b)	The adaptation process must be quality-assured; first and foremost by involvi
 c)	The probability of an ethical use of the tool must be documented. <br/>
 d)	Loyalty to the pedagogical approaches and principles of the tool is needed (see also guideline) and must be documented. <br/>
 e)	Commercialization must not be undertaken; also the new version of the tool must be freely and easily accessible for interested users. <br/>
-f)	In principle, a transfer will be free of charge for the receiving organization, if the above-mentioned conditions can be met and if     the Danish support can be kept on a minimal level. If more extensive resources are necessary to support the transfer, an agreement on a     reasonable fee will be made. <br/>
+
 
 <h2>Technology </h2>
 <li>The tool is programmed in Java Script and HTML 5. </li>
